@@ -27,3 +27,13 @@ chmod +x z.sh
 sudo apt install socat
 
 source ~/.dotfiles/shell/wsl/.agent-bridge.sh
+
+# Homebrew
+echo 'Install homebrew'
+echo '----------------'
+echo install homebrew
+sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
