@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # ZSH Plugins
-plugins=(git aws laravel)
+plugins=(git aws terraform laravel)
 
 source $ZSH/oh-my-zsh.sh
 
