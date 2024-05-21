@@ -2,10 +2,10 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # ZSH Plugins
-plugins=(git aws terraform laravel)
+plugins=(git aws terraform python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -17,3 +17,8 @@ unset file
 
 export NVM_DIR=~/.nvm
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# 1Password ssh
+source $HOME/.agent-bridge.sh
+
+alias python="python3"

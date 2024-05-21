@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Hide "last login" line when starting a new terminal session
-touch $HOME/.hushlogin
-
 # Install zsh
 echo 'Install oh-my-zsh'
 echo '-----------------'
@@ -14,12 +11,16 @@ ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
 ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
 git config --global core.excludesfile $HOME/.global-gitignore
 
-
-
 # Symlink zsh prefs
 rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
+# Spaceship
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+mkdir ~/.config
+ln -s $HOME/.dotfiles/shell/spaceship.zsh $HOME/.config/spaceship.zsh
 
 # Activate zsh
 cd ~/.dotfiles/shell

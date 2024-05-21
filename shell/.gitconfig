@@ -4,3 +4,5 @@
   path = ~/.gitconfig-work
 [init]
 	defaultBranch = master
+[core]
+	excludesfile = /home/morgan/.global-gitignore
