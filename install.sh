@@ -25,3 +25,6 @@ ln -s $HOME/.dotfiles/shell/spaceship.zsh $HOME/.config/spaceship.zsh
 # Activate zsh
 cd ~/.dotfiles/shell
 chmod +x z.sh
+
+# To open browser links from wsl
+sudo apt install wslu

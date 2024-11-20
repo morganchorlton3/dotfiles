@@ -1,8 +1,15 @@
 [includeIf "gitdir:~/personal/"]
   path = ~/.gitconfig-personal
+[includeIf "gitdir:~/.dotfiles/"]
+  path = ~/.gitconfig-personal
+
 [includeIf "gitdir:~/dlx/"]
   path = ~/.gitconfig-work
+
+
 [init]
 	defaultBranch = master
 [core]
 	excludesfile = /home/morgan/.global-gitignore
+	sshCommand = ssh.exe
+	autocrlf = input
