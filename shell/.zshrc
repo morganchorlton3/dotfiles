@@ -5,13 +5,12 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="spaceship"
 
 # ZSH Plugins
-#plugins=(git aws terraform python zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting tmux)
 plugins=(git aws terraform python tmux zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles
-for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
+for file in ~/personal/dotfiles/shell/.{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file

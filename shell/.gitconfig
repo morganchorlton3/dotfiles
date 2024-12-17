@@ -1,7 +1,5 @@
 [includeIf "gitdir:~/personal/"]
   path = ~/.gitconfig-personal
-[includeIf "gitdir:~/.dotfiles/"]
-  path = ~/.gitconfig-personal
 
 [includeIf "gitdir:~/dlx/"]
   path = ~/.gitconfig-work
